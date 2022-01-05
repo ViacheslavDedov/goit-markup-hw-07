@@ -1,0 +1,36 @@
+
+.feature {
+    @include centered-Y-content;
+    flex-wrap: wrap;
+    padding-top: 94px;
+}
+
+.feature__icon-box {
+    @include centered-content;
+    margin-bottom: 30px;
+    height: 120px;
+    background-color: var(--buton-collor);
+}
+
+.feature__item {
+    margin-right: 30px;
+    width: calc((100% - 90px) / 4);
+
+    &:last-child {
+    margin-right: 0;
+}}
+
+.feature__head {
+    @include font(bold, 14px, calc(16 / 14), 0.03em, $main-color); 
+  
+    text-transform: uppercase;
+    width: 270px;
+    height: 16px;
+}
+
+.feature__text {
+    padding-top: 10px;
+    @include font(normal, 14px, calc(24 / 14), 0.03em, $sec-color); 
+    width: 270px;
+    height: 75px;
+}

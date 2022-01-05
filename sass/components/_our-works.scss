@@ -1,0 +1,36 @@
+
+.section__title {
+    @include font(bold, 36px, calc(42 / 36), 0.03em, $main-color); 
+   
+    text-align: center;
+    padding-top: 94px;
+    padding-bottom: 50px;
+}
+
+.cardset {
+    @include centered-X-content;
+    flex-wrap: wrap;
+    padding-bottom: 94px;
+    
+    &__descript,
+    &__mobile,
+    &__design {
+        position: absolute;
+        top: 224px;
+        @include centered-content;
+        width: 370px;
+        height: 70px;
+        background-color: $backg-cardset;
+    }     
+&__title {
+    @include font(bold, 14px, calc(16 / 14), 0.03em, $third-color); 
+    text-align: center;
+    text-transform: uppercase;
+}
+&__card {
+    position: relative;
+    margin-right: 30px;
+    width: calc((100% - 60px) / 3);
+
+&:last-child {
+    margin-right: 0;}}}

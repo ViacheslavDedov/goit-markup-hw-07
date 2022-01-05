@@ -1,0 +1,35 @@
+
+footer {
+    background-color: var(--backgr-color)
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 60px;   
+}
+
+.logo__text--white {
+    color: var(--third-color);
+    display: inline-block;
+}
+
+.address__item {
+    @include font(normal, 14px, calc(24 / 14), 0.03em, $third-color); 
+    font-style: normal;
+    
+    &:not(:last-child) {
+    margin-bottom: 9px;
+
+    &:first-child {
+        margin-top: 20px;
+    }}}
+
+address {
+    margin-right: 70px;
+}
+
+.address__link {
+    color: var(--backgr);
+}

@@ -1,0 +1,99 @@
+nav,
+.links,
+.contacts,
+header .container {
+    @include centered-X-content(space-between);
+}
+   
+header {
+    border-bottom: 1px solid var(--forth-color);
+}
+    .logo {
+        margin-right: 93px; 
+        @include centered-Y-content();
+
+        font-family: $secondaryFont;
+        @include font(bold, 26px, calc(31 / 26), 0.03em, $act-color);       
+       
+        &__text--black {
+            color: var(--main-color);
+            display: inline-block;
+        }}
+
+.links__item {
+    @include centered-Y-content (inline-flex);
+    
+    margin-right: 50px;
+    padding: 30.5px 0;  
+    position: relative;
+        
+    &:last-child {
+    margin-right: 0;
+}}
+    
+.links__link {
+    @include font(500, 14px, calc(16/14), 0.02em, $main-color);
+  
+&:focus,
+&:hover {
+    color: var(--act-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}}
+
+.links__link--active {
+    @include font(500, 14px, calc(16 / 14), 0.02em, $act-color); 
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 75px;
+    left: 0%;
+    width:100%;  
+    height: 4px;
+    border-radius: 4px;
+    border-color: var(--act-color);
+    background-color: var(--act-color);
+}}
+
+.contacts__item  {
+    margin-right: 50px;
+    @include centered-Y-content(inline-flex);
+  
+    padding: 30.5px 0; 
+    margin: 0 0 0 50px; 
+       
+&:first-child {
+    margin-left: 0;
+}} 
+
+.contacts__link {
+    @include centered-Y-content;
+    @include font(500, 14px, calc(16 / 14), 0.02em, $sec-color); 
+    
+    &:hover,
+    &:focus{
+        color: var(--act-color);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+    &:hover .contacts__mail,
+    &:hover .contacts__mobile,
+    &:focus .contacts__mail,
+    &:focus .contacts__mobile {
+        fill: var(--act-color);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}}
+
+.contacts__mail,
+.contacts__mobile {
+    margin-right: 10px;
+    fill: var(--sec-color);
+}
+
+.contacts__mail {
+    width: 16px;
+    height: 12px;
+}
+.contacts__mobile {
+    width: 12px;
+    height: 16px;
+}
